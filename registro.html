@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
+	<link rel="icon" href="LawZebo.png" sizes="16x16" type="image/png">
+	<title>Lawzebo! 2.0.0</title>
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Tomorrow&display=swap');
+	body{
+	    min-height:100vh;
+	    background-image: linear-gradient(black, #666666); 
+	    background-attachment: fixed;
+	    text-align:center;
+	    vertical-align: middle;
+	}
+	
+	*{
+		padding:0;
+		margin:0;
+		font-family: 'Tomorrow', sans-serif;
+		color: white;
+		user-select: none;
+	}
+	
+	#form{
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+		border:3px solid white;
+		text-align: center;
+		border-radius: 30px;
+		transition: box-shadow 1s;
+		box-shadow: 0px 0px 20px white;
+		min-width:758px;
+		width:40%;
+		display:inline-block;
+	}
+	
+	#form:hover{
+		box-shadow: 0px 0px 50px white;
+	}
+	.inputs{
+		font-size: 20px;
+		width: 64%;
+		text-align: center;
+		background: none;
+		border: 2px white solid;
+		font-weight: bold;
+		outline: none;
+		border-radius:0px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		box-sizing: border-box;
+		display:inline-block;
+		margin-top:5px;
+		margin-bottom:5px;
+		transition:box-shadow .5s;
+		caret-color: grey;  
+	}
+	
+	#logo{
+		width: 200px;
+		height:200px;
+		border-radius:360px;
+		box-shadow:0 0 0 0;
+		transition:box-shadow 1s;
+		z-index:99999;
+	}
+	
+	#spam{
+	    display:none;
+	}
+	
+	#titolo{
+		font-size: 50px;
+	}
+	
+	.envii{
+		width: 80%;
+		color: grey;
+		background: white;
+		border:none;
+		padding: 5px;
+		font-size: 20px;
+		cursor:pointer;
+		outline: none;
+		font-weight: bold;
+		transition: box-shadow .2s;
+	}
+	
+	.form-divs{
+    	  width:80%;
+    	  display:inline-block;
+    	  text-align:right;
+	}
+
+	.envii:hover{
+		box-shadow: 0px 0px 10px grey;
+	}
+	
+	.testo-inputs{
+	    font-size:20px;
+	}
+	
+	.inputs:focus{
+	    box-shadow: 0px 0px 15px white;
+	}
+
+	.spana{
+		position: absolute;
+		color:#E24040;
+		font-size: 38px;
+		opacity: 0;
+		padding-left: 5px;
+		transition: opacity 1s,padding-left 1s;
+	}
+
+	.palpabile{
+		opacity: 1;
+	}
+
+	#informacc{
+		margin-top:10px;
+		margin-bottom: 10px;
+		color:#E24040;
+		text-decoration: underline;
+	}
+	
+	#seguente{
+	    display:none;
+	    color: #014E22;
+		background: #4ED181;
+	}
+	
+		@media screen and (max-width:500px){
+            /*Portrait*/
+        #form{
+        position: absolute;
+        min-width:0px;
+		border:3px solid white;
+		text-align: center;
+		width:90%;
+		
+		border-radius: 30px;
+		transition: box-shadow 1s;
+		box-shadow: 0px 0px 20px white;
+
+		display:inline-block;
+        }
+        #contra{
+            font-size:35px;
+        }
+        ::placeholder{
+            font-size:20px;
+        }
+        
+        .inputs{
+	        width:100%;
+	        border: 1px white solid;
+	    }
+	    .form-divs{
+	        text-align:center;
+	    }
+	    #logo{
+	        width:150px;
+	        height:150px;
+	    }
+}
+</style>
+    
+        
+        <div id="form">
+		    <br/>
+			<img id="logo" src="LawZebo.png"><br/>
+			<br/>
+			<p id="titolo">Crea tu cuenta:</p><br/>
+		<div id="divsss" class="form-divs">
+			<p class="testo-inputs">Nombre de usuario: 
+			<input class="inputs" type="text" name="user" placeholder="Ingrese su nombre de usuario" id="uno" onkeyup="mayuscula(this.id)" onkeydown="mayuscula(this.id)" spellcheck="false" maxlength="10" autocomplete="off" tabindex="1" onkeypress="validaenter()"><span id="unob" class="spana">!</span></p>
+			
+            <p class="testo-inputs">Nombre de completo: 
+            <input class="inputs" type="text" name="user_name" placeholder="Ingrese su nombre completo" id="dos"  onkeyup="mayuscula(this.id)" onkeydown="mayuscula(this.id)" spellcheck="false" maxlength="28" autocomplete="off" tabindex="2" onkeypress="validaenter()"><span id="dosb" class="spana">!</span></p>
+            
+            <p class="testo-inputs">Edad: 
+            <input class="inputs" type="text" min="13" max="80" name="user_age" placeholder="Ingrese su edad" id="tre" spellcheck="false" autocomplete="off" tabindex="3"  onkeypress="validaenter()"><span id="treb" class="spana">!</span></p>
+
+            <p class="testo-inputs">País: 
+            <input class="inputs" type="text" name="user_nation" placeholder="Ingrese su país de residencia" id="cua"  onkeyup="mayuscula(this.id)" onkeydown="mayuscula(this.id)" spellcheck="false" maxlength="10" autocomplete="off" tabindex="4"  onkeypress="validaenter()"><span id="cuab" class="spana">!</span></p>
+            
+            <p class="testo-inputs">Contraseña: 
+            <input class="inputs" type="password" name="user_pass" placeholder="Ingrese su contraseña" id="cin" spellcheck="false" maxlength="10" autocomplete="off" tabindex="5"><span id="cinb" class="spana">!</span></p>
+            
+            <p class="testo-inputs">Confirmar contraseña: 
+            <input class="inputs" type="password" name="user_pass2" placeholder="Ingrese su contraseña" id="sei" spellcheck="false" maxlength="10" autocomplete="off" tabindex="6"  onkeypress="validaenter()"><span id="seib" class="spana">!</span></p>
+            
+        
+		</div>
+		<p id="informacc"></p>
+			
+			<p><input type="submit" class="envii" id="suvmit" onclick="validatione()" value="Regístrame"></p>
+			<p><button class="envii" id="seguente" onclick="window.location.href = 'https://lawzebo.000webhostapp.com';">Inicio de Sesión</a></button></p>
+			<br/>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script>
+		function mayuscula(staccato){
+		    var subeamayus=document.getElementById(staccato);
+    		var mays= (subeamayus.value).length;
+    		if(mays==1){subeamayus.value= subeamayus.value.toUpperCase();}
+		}
+		  
+
+		function validatione(){
+			var arr=["uno","dos","tre","cua","cin","sei"];
+
+			var validados=0;
+			var conta=0;
+			do{
+				if(document.getElementById(arr[conta]).value==""){
+					scorrecto(arr[conta]);
+					admirattione(arr[conta]);
+				}else{
+					correcto(arr[conta]);
+					admirattionent(arr[conta]);
+					validados++;				
+				}
+				conta++;
+
+			}while(conta<=5); 
+
+			if(validados==6){
+				passage()
+			}else{
+				informacc.innerHTML="Favor de llenar todos los campos.";
+
+			}
+		}
+
+		//Funciones de Errores o Aciertos Visuales
+
+		function scorrecto(aidi){document.getElementById(aidi).style.borderColor="#E24040";}
+
+		function correcto(ad){document.getElementById(ad).style.borderColor="white";}
+
+		function admirattione(admiraa){var adm = "#" + admiraa + "b";$(adm).addClass("palpabile");}
+
+		function admirattionent(admiraa){var adm = "#" + admiraa + "b";$(adm).removeClass("palpabile");}
+
+		//Verificacion de Edad
+		function passage(){
+			console.log(tre.value);
+			if(tre.value<13  || tre.value>80 || isNaN(tre.value)){
+				informacc.innerHTML="Ingrese una edad válida. (13-80)";
+				scorrecto("tre");admirattione("tre");
+
+			}else{
+				passsame();
+			}
+		}
+
+		//Verificacion de Contraseñas
+		function passsame(){
+			if(cin.value!=sei.value){
+
+				informacc.innerHTML="Las contraseñas no coinciden.";
+
+				scorrecto("cin");scorrecto("sei");
+
+				admirattione("cin");admirattione("sei");
+
+			}else{
+				//el codigo de verificacion de usuario
+				informacc.innerHTML="";
+
+				 ajax();
+			}
+		}
+
+        function validaenter(){if(event.code=="Enter"){validatione();}}
+        
+        function timernext(){
+            setTimeout(function(){ location.replace("https://lawzebo.000webhostapp.com/dashboard.php"); }, 1000);
+        }
+
+		//COMIENZO DE LA TORTURA DE AJAX
+
+		var passiff=0;
+
+		function ajax(){
+		    if(window.XMLHttpRequest){xml = new XMLHttpRequest();}else{xml = ActiveXObject("Microsoft.XMLHTTP");}
+
+			var enviatione = "usera="+uno.value+"&namea="+dos.value+"&agea="+tre.value+"&countrya="+cua.value+"&passworda="+cin.value+"&passss="+passiff;
+			
+			console.log(enviatione);
+						
+
+			xml.onreadystatechange =function(){
+				if(xml.readyState==4 && xml.status==200){
+					var mensaje = xml.responseText;
+					
+					if(mensaje=="usado()"){
+					    //Existe Usuario
+					    informacc.innerHTML="El usuario ya esta en uso.";
+					}else{
+					    
+					    logo.style.boxShadow="0px 0px  0px 5000px #82FFA9";
+					    divsss.style.display="none";
+					    titolo.style.display="none";
+					    suvmit.style.display="none";
+					    
+					    timernext();
+					}
+				}
+			}
+
+			xml.open("POST","registrattione.php",true);
+			xml.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+			xml.send(enviatione);
+		}
+
+		</script>
+	
+</html>
