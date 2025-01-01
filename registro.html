@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
 	<link rel="icon" href="LawZebo.png" sizes="16x16" type="image/png">
 	<title>Lawzebo! 2.0.0</title>
+	<meta charset="UTF-8">
 <style>
 	@import url('https://fonts.googleapis.com/css?family=Tomorrow&display=swap');
 	body{
@@ -198,7 +199,7 @@
 		<p id="informacc"></p>
 			
 			<p><input type="submit" class="envii" id="suvmit" onclick="validatione()" value="Regístrame"></p>
-			<p><button class="envii" id="seguente" onclick="window.location.href = 'https://lawzebo.000webhostapp.com';">Inicio de Sesión</a></button></p>
+			<p><button class="envii" id="seguente" onclick="window.location.href = 'https://localhost';">Inicio de Sesión</a></button></p>
 			<br/>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -279,7 +280,7 @@
         function validaenter(){if(event.code=="Enter"){validatione();}}
         
         function timernext(){
-            setTimeout(function(){ location.replace("https://lawzebo.000webhostapp.com/dashboard.php"); }, 1000);
+            setTimeout(function(){ location.replace("https://localhost/dashboard.php"); }, 1000);
         }
 
 		//COMIENZO DE LA TORTURA DE AJAX

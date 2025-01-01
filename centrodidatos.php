@@ -331,7 +331,7 @@
         <?php
             } else if (isset($_POST['password'])) {
                 
-        $conexion = mysqli_connect("localhost","id9406842_root","quesueno2121","id9406842_usuarios")or die("hola");
+                $conexion = mysqli_connect("localhost","root","","elearningphp")or die("Error en conexión");
 
     mysqli_query($conexion,"update miembros
                             set ipes=''
@@ -339,12 +339,12 @@
 
                             
         ?>
-        <script>window.location.replace("http://lawzebo.000webhostapp.com");</script>
+        <script>window.location.replace("http://index.php");</script>
         <?php
         
             }else if (isset($_POST['courses'])){
                 
-        $conexion = mysqli_connect("localhost","id9406842_root","quesueno2121","id9406842_usuarios")or die("hola");
+                $conexion = mysqli_connect("localhost","root","","elearningphp")or die("Error en conexión");
 
         $registros = mysqli_query($conexion, "select user,uno,dos,tres,cuatro,cinco,seis,siete,ocho from miembros where user='$_REQUEST[utente]'")or die("Error de Registros");
 

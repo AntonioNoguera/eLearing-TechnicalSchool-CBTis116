@@ -4,7 +4,7 @@ $ciave = $_POST['newpass'];
 $validacione = $_POST['passif'];
 
 
-$conexion = mysqli_connect("localhost","id9406842_root","quesueno2121","id9406842_usuarios")or die("hola");
+$conexion = mysqli_connect("localhost","root","","elearningphp")or die("Error en conexión");
 
 $registros = mysqli_query($conexion, "select user,conta from miembros where user='$conto'")or die("Error de Registros");
 

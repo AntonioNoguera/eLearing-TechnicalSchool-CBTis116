@@ -8,7 +8,7 @@ echo $codice=$_POST['passworda'];
 echo $validattione=$_POST['passss'];
 echo $aipi= $_SERVER['REMOTE_ADDR'];
 
-$conexion = mysqli_connect("localhost","id9406842_root","quesueno2121","id9406842_usuarios")or die("hola");
+$conexion = mysqli_connect("localhost","root","","elearningphp")or die("Error en conexión");
 
 $registros = mysqli_query($conexion, "select user from miembros where user='$uttente'")or die("Error de Registros");
 

@@ -263,7 +263,7 @@
     <?php
     $aipi= $_SERVER['REMOTE_ADDR'];
 	    
-	    $conexion = mysqli_connect("localhost","id9406842_root","quesueno2121","id9406842_usuarios")or die("hola");
+	$conexion = mysqli_connect("localhost","root","","elearningphp")or die("Error en conexión");
 	    
 	    $registros = mysqli_query($conexion, "select user from miembros where ipes='$aipi'")or die("Error de Registros");
 	    
@@ -297,7 +297,7 @@
 			<br/>
 			<p id="info"></p>
 			<input type="submit" id="envii" onmouseup="ajax()" value="Siguiente"><br/><br/>
-			<p><a id="enlace" href="http://lawzebo.000webhostapp.com/dashboard.php">Continua Sin Cuenta</a> ó <a href="http://lawzebo.000webhostapp.com/registro.html">Crea Una Cuenta</a><br/><br/></p>
+			<p><a id="enlace" href="http://localhost/dashboard.php">Continua Sin Cuenta</a> ó <a href="http://localhost/registro.html">Crea Una Cuenta</a><br/><br/></p>
 		</div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script type="text/javascript">

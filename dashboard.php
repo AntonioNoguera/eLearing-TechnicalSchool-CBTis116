@@ -320,7 +320,7 @@
 	error_reporting(0);
 	$usuario = $_REQUEST['nomediconta'];
 	
-	$conexion = mysqli_connect("localhost","id9406842_root","quesueno2121","id9406842_usuarios")or die("hola");
+	$conexion = mysqli_connect("localhost","root","","elearningphp")or die("Error en conexión");
 
     mysqli_query($conexion,"update miembros
                             set ipes='$_REQUEST[ip]'
@@ -392,7 +392,7 @@
 <form class="hola">
 </br><?php
 
-$connect=mysqli_connect("localhost","id9406842_root","quesueno2121","id9406842_usuarios") or die("Problemas de conexión");
+$conexion = mysqli_connect("localhost","root","","elearningphp")or die("Error en conexión");
 
 $registros = mysqli_query($connect,"select contenuto from comentarios") or die ("Problemas de Selección de Datos.");
 
