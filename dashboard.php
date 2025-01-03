@@ -18,8 +18,7 @@
 			padding:0;
 			margin:0;
 			font-family: 'Tomorrow', sans-serif;
-			color: white;
-			user-select: none;
+			color: white; 
 			outline:none;
 			scroll-behavior: smooth;
 		}
@@ -111,8 +110,7 @@
     	}
     	
 		.pulsan{
-		    font-size:17px;
-		    user-select:none;
+		    font-size:17px; 
 		}
 
 		.pulsan:hover{
@@ -316,8 +314,9 @@
 </script>
 </head>
 <body oncontextmenu="return false" onload="diayhora()">
-	<?php
-	error_reporting(0);
+	<?php 
+	
+    error_reporting(0);
 	$usuario = $_REQUEST['nomediconta'];
 	
 	$conexion = mysqli_connect("localhost","root","","elearningphp")or die("Error en conexión");
@@ -394,7 +393,7 @@
 
 $conexion = mysqli_connect("localhost","root","","elearningphp")or die("Error en conexión");
 
-$registros = mysqli_query($connect,"select contenuto from comentarios") or die ("Problemas de Selección de Datos.");
+$registros = mysqli_query($conexion,"select contenuto from comentarios") or die ("Problemas de Selección de Datos.");
 
 while ($reg=mysqli_fetch_array($registros))
 {
@@ -405,8 +404,7 @@ while ($reg=mysqli_fetch_array($registros))
 	
 
 } 
-
-mysqli_close($connect);
+  
 ?>
 </form>
 <center><a href="#oldest" id="newest"><span class="recient">↑ Volver Inicio ↑</span></a></center>

@@ -19,8 +19,7 @@
 		padding:0;
 		margin:0;
 		font-family: 'Tomorrow', sans-serif;
-		color: white;
-		user-select: none;
+		color: white; 
 	}
 
 	#form{

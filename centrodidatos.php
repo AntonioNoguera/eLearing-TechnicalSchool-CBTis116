@@ -13,8 +13,7 @@
                 padding:0;
                 margin:0;
                 font-family: 'Tomorrow', sans-serif;
-                color: white;
-                user-select: none;
+                color: white; 
                 outline:none;
             }
             
@@ -23,8 +22,7 @@
                 background-image: linear-gradient(black, #666666); 
                 background-attachment: fixed;
                 text-align:center;
-                vertical-align: middle;
-                user-select:none;
+                vertical-align: middle; 
             }   
             
             .header{
@@ -293,7 +291,7 @@
         <script type="text/javascript" src="scripts/ejercicio1.js"></script>
         <script type="text/javascript" src="scripts/ejercicio2.js"></script>
         <script type="text/javascript" src="scripts/ejerciciosN.js"></script>
-        <script type="text/javascript" src="scripts/progressmaker.js"></script>
+        <script type="text/javascript" src="scripts/progressmakerv2.js"></script>
         
     </head>
 
@@ -339,7 +337,7 @@
 
                             
         ?>
-        <script>window.location.replace("http://index.php");</script>
+        <script>window.location.replace("http://localhost/eLearing-TechnicalSchool-CBTis116/");</script>
         <?php
         
             }else if (isset($_POST['courses'])){
@@ -383,14 +381,14 @@
         <div class="media space">
             <span class="option"><u>Progreso de : <?php echo $_REQUEST['utente']; ?>.</u></span>
             <p class="pulsan">Progreso del curso: <span id="numeroprogreso"></span></p>
-            <p class="pulsan"><span class="fine" id="unP">⚫ </span>Primer módulo: <span id="unD"></span>.</p>
-            <p class="pulsan"><span class="fine" id="doP">⚫ </span>Segundo módulo: <span id="doD"></span>.</p>
-            <p class="pulsan"><span class="fine" id="trP">⚫ </span>Tercer módulo: <span id="trD"></span>.</p>
-            <p class="pulsan"><span class="fine" id="cuP">⚫ </span>Cuarto módulo: <span id="cuD"></span>.</p>
-            <p class="pulsan"><span class="fine" id="ciP">⚫ </span>Cinco módulo: <span id="ciD"></span>.</p>
-            <p class="pulsan"><span class="fine" id="seP">⚫ </span>Seis módulo: <span id="seD"></span>.</p>
-            <p class="pulsan"><span class="fine" id="siP">⚫ </span>Siete módulo: <span id="siD"></span>.</p>
-            <p class="pulsan"><span class="fine" id="ocP">⚫ </span>Ocho módulo: <span id="ocD"></span>.</p>
+            <p class="pulsan"><span class="fine" id="unP"> </span>Primer módulo: <span id="unD"></span>.</p>
+            <p class="pulsan"><span class="fine" id="doP"> </span>Segundo módulo: <span id="doD"></span>.</p>
+            <p class="pulsan"><span class="fine" id="trP"> </span>Tercer módulo: <span id="trD"></span>.</p>
+            <p class="pulsan"><span class="fine" id="cuP"> </span>Cuarto módulo: <span id="cuD"></span>.</p>
+            <p class="pulsan"><span class="fine" id="ciP"> </span>Cinco módulo: <span id="ciD"></span>.</p>
+            <p class="pulsan"><span class="fine" id="seP"> </span>Seis módulo: <span id="seD"></span>.</p>
+            <p class="pulsan"><span class="fine" id="siP"> </span>Siete módulo: <span id="siD"></span>.</p>
+            <p class="pulsan"><span class="fine" id="ocP"> </span>Ocho módulo: <span id="ocD"></span>.</p>
             <br/>
         </div>
         
@@ -410,9 +408,7 @@
                     
                     <p>
                             <button class="submit-content" onclick="ajax(this.id);" id="0">Concluir Tema</button>
-                    </p>
-                    
-                
+                    </p> 
                 </div>
             
             
