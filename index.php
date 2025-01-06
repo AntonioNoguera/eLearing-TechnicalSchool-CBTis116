@@ -296,7 +296,7 @@
 			<br/>
 			<p id="info"></p>
 			<input type="submit" id="envii" onmouseup="ajax()" value="Siguiente"><br/><br/>
-			<p><a id="enlace" href="http://localhost/dashboard.php">Continua Sin Cuenta</a> ó <a href="http://localhost/registro.html">Crea Una Cuenta</a><br/><br/></p>
+			<p><a id="enlace" href="http://localhost/eLearing-TechnicalSchool-CBTis116/dashboard.php">Continua Sin Cuenta</a> ó <a href="http://localhost/eLearing-TechnicalSchool-CBTis116/registro.html">Crea Una Cuenta</a><br/><br/></p>
 		</div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script type="text/javascript">
