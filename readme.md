@@ -43,6 +43,9 @@ Claro que se cuenta con la validación de formularios, para evitar que, el usuar
 Algo que siempre me había molestado de muchas interfaces era que no me enteraba de cuando el usuario había logrado o no iniciar sesión, o que el proceso no era tan claro, este flujo buscaba dejar demasiado en claro al usuario cuando había logrado o no iniciar sesión.
 ![Texto alternativo](readme_assets/login_user_flow.gif)
 
+### Sesión de invitado
+Claro que la plataforma no obliga a los usuarios a entrar para poder interactuar, unicamente para poder visualizar los post realizados por otros usuarios.
+![Texto alternativo](readme_assets/guest_session.gif)
  
  ### Crea un post
  Una de las funcionalidades no críticas pero relevante, es la habilidad de generar post para los demás usuarios. Esta es sencilla, límite de caracteres únicamente, y como detalle interesante al estar almacenado en php, procesa HTML.
@@ -52,6 +55,14 @@ Algo que siempre me había molestado de muchas interfaces era que no me enteraba
 El usuario cuenta con una sesión, por lo que se permite que el usuario pueda revisitar su cuenta de forma rápida, sin tener que volver a hacer inicio de sesión, me encantaría decir que esto se consigue con algún token, localStorage, o cookie, sin embargo por la época no conocia nada de esto, así que guardo las ip en la base de datos....
 ![Texto alternativo](readme_assets/session_management.gif)
 
+
+### Curso en la plataforma
+El principal objetivo de este proyecto es enseñar a los usuarios para aprender toda la teória básica del solfeo, entonces la idea es principalmente navegar a travez de este en forma de unidades, una vez cursando el contenido de la unidad
+![Texto alternativo](readme_assets/course_progress.gif)
+
+### Actividades del curso
+Como no quería que el curso fuera unicamente examen, desarrolle como un quiz mas interactivo en el que se tiene que tener cierto dominio, y se debe de obtener una calificación por arriba del 80% para poder obtener el curso como completado.
+![Texto alternativo](readme_assets/quizz_executing.gif)
 
 ### Mejoras
 - Seguridad: En su tiempo se me hizo sencillo guardar en la tabla las ip que hacian login con el único fin de guardar el ultimo dispositivo que tuvo la sesión de esa cuenta, no estoy seguro de si esto se haya llegado a realizar alguna vez, pero hoy en día es muy mala practica.
